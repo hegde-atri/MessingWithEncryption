@@ -11,17 +11,21 @@ for i in password:
 for i in passwordAr:
     secure.append(ord(i))
 
-print("Made your password into characters, and then into the corresponding int value: " + secure)
+print("Made your password into characters, and then into the corresponding int value: ", end="")
+print(secure)
 for i in secure:
     securePass.append(i ^ key)
 
-print("used XOR gate on each integer: " + securePass)
+print("used XOR gate on each integer: ", end="")
+print(securePass)
 
 for i in securePass:
     stage1.append(i ^ key)
 
-print("applied XOR gate on the stored int array: " + stage1)
+print("applied XOR gate on the stored int array: ", end="")
+print(stage1)
 for i in stage1:
     stage2.append(chr(i))
 
-print("Turned the integers we got into characters: " + stage2)
+print("Turned the integers we got into characters: ", end="")
+print(stage2)
